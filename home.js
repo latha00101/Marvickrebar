@@ -135,4 +135,39 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(`Inspecting property: ${label}`);
         });
     });
+
+    /* ─── SERVICES TAB SYSTEM ─── */
+    const tabBtns = document.querySelectorAll(".services-tab-btn");
+    const panels = document.querySelectorAll(".services-panel");
+
+    tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const targetTab = btn.getAttribute("data-tab");
+
+            // Toggle active state for tab buttons
+            tabBtns.forEach((b) => b.classList.remove("active"));
+            btn.classList.add("active");
+
+            // Toggle active state for panels
+            panels.forEach((panel) => {
+                if (panel.id === `panel-${targetTab}`) {
+                    panel.classList.add("active");
+                    panel.classList.add("fade-in");
+
+                    // Trigger reveal animations for the selected panel's children
+                    const reveals = panel.querySelectorAll(".reveal, .reveal-left, .reveal-scale");
+                    reveals.forEach((el, index) => {
+                        el.classList.remove("visible");
+                        // Slight staggered timeout
+                        setTimeout(() => {
+                            el.classList.add("visible");
+                        }, index * 80);
+                    });
+                } else {
+                    panel.classList.remove("active");
+                    panel.classList.remove("fade-in");
+                }
+            });
+        });
+    });
 });
