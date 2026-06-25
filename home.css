@@ -223,6 +223,22 @@ nav {
 	position: relative;
 	overflow: hidden;
 }
+.hero-bg {
+	position: absolute;
+	inset: 0;
+	background: url("rebar3.jpeg") center/cover no-repeat;
+	opacity: 0.18;
+	filter: grayscale(30%) brightness(0.65) contrast(110%);
+	z-index: 0;
+	transform: scale(1.06);
+	animation: heroBgZoom 8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+	pointer-events: none;
+}
+@keyframes heroBgZoom {
+	to {
+		transform: scale(1);
+	}
+}
 
 /* Radial glow orb */
 .hero-glow {
