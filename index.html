@@ -1,434 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mavericks Rebar</title>
-    <link rel="stylesheet" href="home.css">
-    <script src="home.js" defer ></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mavericks Rebar</title>
+	<link rel="stylesheet" href="home.css">
+	<script src="home.js" defer></script>
 
 </head>
+
 <body>
-    <div id="cur"></div>
-<div id="cur-ring"></div>
+	<div id="cur"></div>
+	<div id="cur-ring"></div>
 
-<!-- NAV -->
-<nav>
-	<a href="#" class="nav-logo">Mavericks Rebar<sup></sup></a>
-	<ul class="nav-links">
-		<li><a href="#about">About Us</a></li>
-		<li><a href="#services">Our Services</a></li>
-		<li><a href="#why">Why Us</a></li>
-		<li><a href="#contact" class="nav-cta">Contact Us</a></li>
-	</ul>
-	<button class="hamburger" aria-label="Menu" onclick="toggleMenu(this)">
-		<span></span><span></span><span></span>
-	</button>
-</nav>
+	<!-- NAV -->
+	<nav>
+		<a href="#hero" class="nav-logo"><img src="logo (2).png" alt="Mavericks Rebar" class="nav-logo-img"><sup></sup></a>
+		<ul class="nav-links">
+			<li><a href="#about">About Us</a></li>
+			<li><a href="#services">Our Services</a></li>
+			<li><a href="#why">Why Us</a></li>
+			<li><a href="#contact" class="nav-cta">Contact Us</a></li>
+		</ul>
+		<button class="hamburger" aria-label="Menu" onclick="toggleMenu(this)">
+			<span></span><span></span><span></span>
+		</button>
+	</nav>
 
-<!-- MOBILE NAV OVERLAY -->
-<div class="mobile-nav" id="mobileNav">
-	<a href="#about" onclick="closeMobileNav()">About Us</a>
-	<a href="#services" onclick="closeMobileNav()">Our Services</a>
-	<a href="#why" onclick="closeMobileNav()">Why Us</a>
-	<a href="#contact" class="mobile-cta" onclick="closeMobileNav()">Contact Us</a>
-</div>
-
-<!-- ─── HERO (using required starter HTML inside <main>) ─── -->
-<main class="hero">
-	<div class="particles" id="particles"></div>
-	<div class="hero-glow"></div>
-	<div class="hero-ring"></div>
-	<div class="hero-ring-2"></div>
-	<div class="hero-bg"></div>
-
-	<div class="eyebrow">Mavericks Rebar</div>
-
-	<h1>Your Trusted Partner in <br><em>Rebar Excellence</em></h1>
-
-	<p class="heropara">Accurate Rebar Detailing & Estimation Services for Construction Projects</p>
-
-	<form class="signup" onsubmit="handleSubmit(event, this)">
-		<div class="signup-row">
-			<input type="email" placeholder="Enter your email address" required>
-			<button type="submit">Request a Quote</button>
-		</div>
-		<p class="email-note">Sign up to get notified </p>
-		<p class="success-msg" id="hero-success">You're on the list — we'll be in touch.</p>
-	</form>
-
-	<div class="eyebrow">Rebar Detialing | Rebar Estimation | Shop Drawing | Bar Bending Schedules</div>
-
-	<div class="scroll-hint">
-		<div class="scroll-line"></div>
-		<span>Scroll</span>
+	<!-- MOBILE NAV OVERLAY -->
+	<div class="mobile-nav" id="mobileNav">
+		<a href="#about" onclick="closeMobileNav()">About Us</a>
+		<a href="#services" onclick="closeMobileNav()">Our Services</a>
+		<a href="#why" onclick="closeMobileNav()">Why Us</a>
+		<a href="#contact" class="mobile-cta" onclick="closeMobileNav()">Contact Us</a>
 	</div>
-</main>
 
-<!-- ─── MARQUEE ─── -->
-<div class="marquee-strip" aria-hidden="true">
-	<div class="marquee-inner">
-		<span>Professional Engineering</span><span class="accent">◆</span>
-		<span>Solutions for Reinforcing Steel</span><span class="accent">◆</span>
-		<span>Rebar Detailing</span><span class="accent">◆</span>
-		<span>High-fidelity 2D Detailing</span><span class="accent">◆</span>
-		<span>3D Structural Modeling</span><span class="accent">◆</span>
-		<span>Rebar Estimation</span><span class="accent">◆</span>
-		<span>Mavericks Rebar</span><span class="accent">◆</span>
-		<!-- duplicate for seamless loop -->
-		 <span>Professional Engineering</span><span class="accent">◆</span>
-		<span>Solutions for Reinforcing Steel</span><span class="accent">◆</span>
-		<span>Rebar Detailing</span><span class="accent">◆</span>
-		<span>High-fidelity 2D Detailing</span><span class="accent">◆</span>
-		<span>3D Structural Modeling</span><span class="accent">◆</span>
-		<span>Rebar Estimation</span><span class="accent">◆</span>
-		<span>Mavericks Rebar</span><span class="accent">◆</span>
-		
-	</div>
-</div>
+	<!-- ─── HERO (using required starter HTML inside <main>) ─── -->
+	<main class="hero">
+		<div class="particles" id="particles"></div>
+		<div class="hero-glow"></div>
+		<div class="hero-ring"></div>
+		<div class="hero-ring-2"></div>
+		<div class="hero-bg"></div>
 
-<!-- ─── About us ─── -->
-<section class="preview-section" id="about" style="padding-top:80px; padding-bottom:0;">
-	<div class="container">
-		<div class="section-label reveal">Who We Are</div>
-		<h2 class="section-title reveal">Get to Know <em> Us </em></h2>
-		<p>Mavericks Rebar specializes in rebar detailing and estimation services for contractors, fabricators, and engineering firms. We deliver accurate shop drawings, bar bending schedules, and material takeoffs that help projects move from planning to construction efficiently.</p>
-		<br><br>
-		<div class="demo-strip">
-			<div class="demo-card reveal" style="transition-delay:.1s">
-				<img src="Rebar.png" alt="Rebar Detailing">
-				<span class="scene-label">Rebar Detailing</span>
-			</div>
-			<div class="demo-card reveal" style="transition-delay:.2s">
-				<img src="estimation.png" alt="Rebar Detailing">
-				<span class="scene-label">Rebar Estimation</span>
-			</div>
-			<div class="demo-card reveal" style="transition-delay:.3s">
-				<img src="detailing.png" alt="Rebar Detailing">
-				<span class="scene-label">Rebar Detailing </span>
-			</div>
-		</div>
-	</div>
-</section>
+		<div class="eyebrow">Mavericks Rebar</div>
 
-<!-- ─── aboout detials ─── -->
-<section class="preview-section" style="padding-top:2px;">
-	<div class="container">
-		<div class="preview-grid">
-			<div class="preview-card reveal">
-				
-				<div class="preview-icon">
-					   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="12" r="7" />
-  <circle cx="12" cy="12" r="3" />
-  <circle cx="12" cy="12" r="0.75" fill="currentColor" />
-  <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
-</svg>
-				</div>
-				<h3>Our Vision</h3>
-				<p>To be a globally recognized leader in rebar detailing services, sustainable practices that contribute to the development of strong and long-lasting infrastructure.</p>
-			</div>
-			<div class="preview-card reveal" style="transition-delay:.15s">
-				
-				<div class="preview-icon">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M3 18l5-6 3.5 3.5L16 9l5 9H3z" />
-  <path d="M16 9V4" />
-  <path d="M16 4h4.5l-1 1.5 1 1.5H16" />
-</svg>
-				</div>
-				<h3>Our Mission</h3>
-				<p>To provide precise,  innovative rebar detailing solutions that enhance structural safety while fostering a culture of collaboration, accountability,improvement.</p>
-			</div>
-			<div class="preview-card reveal" style="transition-delay:.3s">
-				
-				<div class="preview-icon">
-					    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <rect x="5" y="14" width="3" height="6" rx="0.5" />
-  <rect x="11" y="10" width="3" height="10" rx="0.5" />
-  <rect x="17" y="6" width="3" height="14" rx="0.5" />
-  <path d="M4 11c3-2 6-1 9-4l5-4" />
-  <path d="M14 3h4v4" />
-</svg>
-				</div>
-				<h3>Vision for Sustainable Growth</h3>
-				<p>As we expand our technical capabilities, We remain focused on delivering error-free detailing services on schedule while building lasting partnerships based on trust.</p>
-			</div>
-			<div class="preview-card reveal" style="transition-delay:.15s">
-				
-				<div class="preview-icon">
-					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="8" r="3" />
-  <path d="M6 19c0-2.5 2.5-4.5 6-4.5s6 2.0 6 4.5" />
-  
-  <path d="M5.5 6.5a2.5 2.5 0 0 1 2-2.5" stroke-dasharray="0" opacity="0.85" />
-  <path d="M4 15.5a4.5 4.5 0 0 1 2.5-3" opacity="0.85" />
-  
-  <path d="M16.5 4a2.5 2.5 0 0 1 2 2.5" opacity="0.85" />
-  <path d="M17.5 12.5a4.5 4.5 0 0 1 2.5 3" opacity="0.85" />
-</svg>
-				</div>
-				<h3>Experienced Technical Team</h3>
-				<p>Our team consists of 10+ experienced Rebar Detailing  and Estimation specialists  dedicated to delivering accurate drawings, bar bending schedules and solutions.</p>
-			</div>
-			
-		</div>
-	</div>
-</section>
+		<h1>Your Trusted Partner in <br><em>Rebar Excellence</em></h1>
 
-<!-- ─── Services ─── -->
-<section class="features-section" id="services">
-	<div class="container">
-		<!-- Dynamic Tabs Navigation -->
-		<div class="services-tabs-nav reveal">
-			<button class="services-tab-btn active" data-tab="detailing">
-				<span>Rebar Detailing</span>
-			</button>
-			<button class="services-tab-btn" data-tab="estimation">
-				<span>Rebar Estimation</span>
-			</button>
-			<div class="tab-indicator"></div>
-		</div>
+		<p class="heropara">Accurate Rebar Detailing & Estimation Services for Construction Projects</p>
 
-		<!-- Tab Content: Detailing -->
-		<div class="services-panel active" id="panel-detailing">
-			<div class="section-label reveal">Rebar Detailing</div>
-			<h2 class="section-title reveal">Precision-Driven <em>Detailing</em><br>for Flawless Construction</h2>
-			<p class="section-subtitle reveal">High-fidelity drawings and schedules tailored for seamless structural coordination.</p>
-
-			<div class="features-list">
-				<div class="feat reveal">
-					<div class="feat-tag">BBS</div>
-					<div class="feat-icon">
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M4 3h11l5 5v13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
-  <path d="M15 3v5h5" />
-  
-  <path d="M6 7h4M6 10h6" stroke-width="1.5" />
-  
-  <rect x="5" y="13" width="14" height="7" rx="0.5" stroke-width="1.5" />
-  <path d="M5 16.5h14M9.5 13v7M14.5 13v7" stroke-width="1" />
-</svg>
-					</div>
-					<h3>Accurate Bar Bending Schedules</h3>
-					<p>We prepare error-free <strong>Bar Bending Schedules</strong> for <strong>precise reinforcement</strong> placement, optimizing material usage and streamlining on-site execution.</p>
-				</div>
-				<div class="feat reveal" style="transition-delay:.08s">
-					<div class="feat-tag">Reinforcement</div>
-					<div class="feat-icon">
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M2 7h20M2 12h20M2 17h20" />
-  
-  <path d="M7 2v20M12 2v20M17 2v20" />
-  
-  <circle cx="7" cy="7" r="0.5" fill="currentColor" />
-  <circle cx="12" cy="12" r="0.5" fill="currentColor" />
-  <circle cx="17" cy="17" r="0.5" fill="currentColor" />
-</svg>
-					</div>
-					<h3>Structural Reinforcement Coordination</h3>
-					<p>Carefully coordinated detailing to identify <strong>structural clashes</strong> early, preventing <strong>costly modifications</strong> and delays during construction.</p>
-				</div>
-				<div class="feat reveal" style="transition-delay:.16s">
-					<div class="feat-tag">Delivery</div>
-					<div class="feat-icon">
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M13 21A9 9 0 1 1 21 11" />
-  
-  <path d="M13 18a6 6 0 1 1 5-5" />
-  
-  <path d="M12 12l-3-3" />
-  <path d="M12 12l2.5 1.5" />
-  
-  <path d="M12 5V6M7 12H6M17 12H18" />
-  
-  <circle cx="17.5" cy="17.5" r="3.5" />
-  
-  <path d="M16 17.5l1 1 2-2" />
-</svg>
-					</div>
-					<h3>Faster Project Delivery</h3>
-					<p>Fabrication-ready drawings to improve <strong>team productivity</strong>, minimize site delays, and maintain tight <strong>construction schedules</strong>.</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Tab Content: Estimation -->
-		<div class="services-panel" id="panel-estimation">
-			<div class="section-label reveal">Rebar Estimation</div>
-			<h2 class="section-title reveal">Reliable Rebar Quantity for <em class="highlight-cost-effective">Cost-Effective</em><br>Project Planning</h2>
-			<p class="section-subtitle reveal">Accurate rebar estimation for faster approvals and lower construction costs.</p>
-
-			<div class="features-list">
-				<div class="feat reveal">
-					<div class="feat-tag">Quantification</div>
-					<div class="feat-icon">
-						<svg class="feat-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-							<rect x="3" y="3" width="18" height="18" rx="1.5" stroke="var(--amber)" stroke-width="1.5"/>
-							<path d="M9 3V21M15 3V21M3 9H21M3 15H21" stroke="var(--amber)" stroke-width="1" stroke-dasharray="2 2" opacity="0.4"/>
-							<rect x="5" y="5" width="4" height="4" fill="var(--amber)" opacity="0.7"/>
-						</svg>
-					</div>
-					<h3>Detailed Material Quantification</h3>
-					<p>Accurate takeoffs and <strong>material quantification</strong> enabling stakeholders to make informed <strong>procurement and budgeting</strong> decisions.</p>
-				</div>
-				<div class="feat reveal" style="transition-delay:.08s">
-					<div class="feat-tag">Estimation</div>
-					<div class="feat-icon">
-						<svg class="feat-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-							<rect x="4" y="4" width="16" height="16" rx="1.5" stroke="var(--amber)" stroke-width="1.5"/>
-							<path d="M9 9H15M9 13H15M9 17H12" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round"/>
-							<path d="M9 22H15" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round"/>
-						</svg>
-					</div>
-					<h3>Global Code-Compliant Estimation</h3>
-					<p>Our estimation conforms to <strong>international standards</strong> like CRSI, EC2, and BS, ensuring absolute compliance and <strong>engineering accuracy</strong>.</p>
-				</div>
-				<div class="feat reveal" style="transition-delay:.16s">
-					<div class="feat-tag">Optimization</div>
-					<div class="feat-icon">
-						<svg class="feat-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-							<path d="M3 3V21H21" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round"/>
-							<path d="M7 14L11 9L15 12L20 6" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-							<circle cx="20" cy="6" r="2.5" fill="var(--amber)"/>
-						</svg>
-					</div>
-					<h3>Budget Optimization & Cost Control</h3>
-					<p>Precise rebar estimates to reduce material waste, enforce strict <strong>cost control</strong>, and ensure total <strong>budget optimization</strong>.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- ─── LOGOS ─── -->
-<div class="logos-section container" style="max-width:none; border-bottom:1px solid var(--border);">
-	<p class="logos-label">Industries We Serve</p>
-	<div class="logos-row">
-		<span class="logo-item">ACI |</span>
-		<span class="logo-item">BS |</span>
-		<span class="logo-item">IS |</span>
-		<span class="logo-item">Eurocode</span>
-		
-	</div>
-</div>
-
-<!-- ─── why ─── -->
-<section class="how-section" id="why">
-	<div class="container">
-		<div class="section-label reveal">Why Us</div>
-		<h2 class="section-title reveal">Professional <em> Engineering Solutions</em><br> for Reinforcing Steel.</h2>
-
-		<div class="timeline">
-			<div class="timeline-step reveal" style="transition-delay:.0s">
-				<div class="step-line"></div>
-				<div class="step-num">Continuously Improving Through Technology</div>
-				<h3>Uncompromising Structural Accuracy</h3>
-				<p>Our meticulous approach to 2D/3D modeling ensures that every dimension is perfectly captured.</p>
-			</div>
-			<div class="timeline-step reveal" style="transition-delay:.1s">
-				<div class="step-line"></div>
-				<div class="step-num">Accountability at Every Stage</div>
-				<h3>Global Industry Compliance</h3>
-				<p>We deliver engineering estimates conforming strictly to EC2, BS, and CRSI Codes of Standard Practice. </p>
-			</div>
-			<div class="timeline-step reveal" style="transition-delay:.2s">
-				<div class="step-line"></div>
-				<div class="step-num">Driven by Skilled Detailing Professionals</div>
-				<h3>Experienced Engineering Team</h3>
-				<p>Our dynamic crew of 10+ certified detailing specialists brings intensive field knowledge to your project. </p>
-			</div>
-			<div class="timeline-step reveal" style="transition-delay:.3s">
-				<div class="step-line"></div>
-				<div class="step-num">Committed to Long-Term Client Success</div>
-				<h3>Flexible Digital Deliverables</h3>
-				<p>We provide hassle-free digital collaboration by submitting comprehensive drawings and BBS directly via email or secure FTP.</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- ─── SPECS ─── -->
-<section class="specs-section" id="specs">
-	<div class="container">
-		<div class="section-label reveal">Know More About Our Work </div>
-		<h2 class="section-title reveal">Built for<br><em>performance.</em></h2>
-
-		<div class="specs-layout">
-			<div class="specs-text reveal-left">
-				<p>Mavericks Rebar is structural detailing frim specializing in reinforced steel engineering solutions.</p>
-				<p>Our team manages projects from start to finish, using advanced methods and a client-first approach. We ensure every detail meets the highest standards, building functional spaces that last and inspire lasting trust.</p>
-				
-				<img src="rebar1.jpeg" alt="Rebar" style="width:100%;height:220px;object-fit:cover;object-position:center;display:block;border-radius:4px;margin:32px 0;">
-				<a href="#contact" class="specs-cta">Contact Us</a>
-			</div>
-			<div class="specs-container">
-        
-
-        <div class="spec-row section-divider">
-            <div class="spec-label">Company Name</div>
-            <div class="spec-value highlight-text">Mavericks Rebar</div>
-        </div>
-        <div class="spec-row">
-            <div class="spec-label">Core Services</div>
-            <div class="spec-value">• Rebar Detailing/Shop drawings • Rebar Estimation</div>
-        </div>
-        <div class="spec-row">
-            <div class="spec-label">Engineering Codes</div>
-            <div class="spec-value">ACI • BS • IS • CRSI</div>
-        </div>
-        <div class="spec-row">
-            <div class="spec-label">Deliverable Formats</div>
-            <div class="spec-value">DWG • DWF • PDF • XLS</div>
-        </div>
-        <div class="spec-row">
-            <div class="spec-label">Team Size</div>
-            <div class="spec-value">10+ Experienced Professionals</div>
-        </div>
-        <div class="spec-row">
-            <div class="spec-label">Location</div>
-            <div class="spec-value">Salem, Tamilnadu</div>
-        </div>
-        <div class="spec-row">
-            <div class="spec-label">Email Id</div>
-            <div class="spec-value">Info@mavericksrebar.com</div>
-        </div>
-    </div>
-		</div>
-	</div>
-</section>
-
-<!-- ─── WAITLIST CTA ─── -->
-<section class="cta-section" id="contact">
-	<div class="cta-glow"></div>
-	<div class="container" style="position:relative;z-index:2;">
-		
-		<div class="section-label" style="justify-content:center;" class="reveal">Contact Us</div>
-		<h2 class="section-title reveal" style="margin-bottom:16px;">Get in Touch<br>with <em>Mavericks Rebar</em></h2>
-		<p class="reveal" style="transition-delay:.1s">Ready to elevate the structural integrity of your next build? Partner with Mavericks Rebar for unparalleled accuracy, competitive pricing, and timely project handovers across the globe. Contact our Salem office today.</p>
-
-		<form class="cta-form reveal" style="transition-delay:.2s" onsubmit="handleSubmit(event, this)">
+		<form class="signup" onsubmit="handleSubmit(event, this)">
 			<div class="signup-row">
 				<input type="email" placeholder="Enter your email address" required>
-				<button type="submit">Get Quote</button>
+				<button type="submit">Request a Quote</button>
 			</div>
-			<p class="cta-note"></p>
-			<p class="success-msg" id="cta-success">You're on the list — we'll be in touch.</p>
+			<p class="email-note">Sign up to get notified </p>
+			<p class="success-msg" id="hero-success">You're on the list — we'll be in touch.</p>
 		</form>
-	</div>
-</section>
 
-<!-- ─── FOOTER ─── -->
-<footer>
-	<div class="footer-logo">Mavericks Rebar<sup></sup>
-		<p>Revolutionizing the Rebar Detailing Industry Since 2022.</p>
+		<div class="eyebrow">Rebar Detialing | Rebar Estimation | Shop Drawing | Bar Bending Schedules</div>
+
+		<div class="scroll-hint">
+			<div class="scroll-line"></div>
+			<span>Scroll</span>
+		</div>
+	</main>
+
+	<!-- ─── MARQUEE ─── -->
+	<div class="marquee-strip" aria-hidden="true">
+		<div class="marquee-inner">
+			<span>Professional Engineering</span><span class="accent">◆</span>
+			<span>Solutions for Reinforcing Steel</span><span class="accent">◆</span>
+			<span>Rebar Detailing</span><span class="accent">◆</span>
+			<span>High-fidelity 2D Detailing</span><span class="accent">◆</span>
+			<span>3D Structural Modeling</span><span class="accent">◆</span>
+			<span>Rebar Estimation</span><span class="accent">◆</span>
+			<span>Mavericks Rebar</span><span class="accent">◆</span>
+			<!-- duplicate for seamless loop -->
+			<span>Professional Engineering</span><span class="accent">◆</span>
+			<span>Solutions for Reinforcing Steel</span><span class="accent">◆</span>
+			<span>Rebar Detailing</span><span class="accent">◆</span>
+			<span>High-fidelity 2D Detailing</span><span class="accent">◆</span>
+			<span>3D Structural Modeling</span><span class="accent">◆</span>
+			<span>Rebar Estimation</span><span class="accent">◆</span>
+			<span>Mavericks Rebar</span><span class="accent">◆</span>
+
+		</div>
 	</div>
-	<p>© 2026 Mavericks Rebar . All rights reserved.</p>
-	<ul class="footer-links">
-		<li><a href="#">Privacy</a></li>
-		<li><a href="#">Terms</a></li>
-		<li><a href="#contact">Contact</a></li>
-	</ul>
-</footer>
+
+	<!-- ─── About us ─── -->
+	<section class="preview-section" id="about" style="padding-top:80px; padding-bottom:0;">
+		<div class="container">
+			<div class="section-label reveal">Who We Are</div>
+			<h2 class="section-title reveal">Get to Know <em> Us </em></h2>
+			<p>Mavericks Rebar specializes in rebar detailing and estimation services for contractors, fabricators, and
+				engineering firms. We deliver accurate shop drawings, bar bending schedules, and material takeoffs that
+				help projects move from planning to construction efficiently.</p>
+			<br><br>
+			<!-- ─── About stick ─── -->
+			<section class="stats-container">
+				<div class="stat-item">
+					<span class="stat-number" data-target="300">1</span>
+					<p class="stat-label">COMPLETE PROJECTS</p>
+				</div>
+
+				<div class="stat-item">
+					<span class="stat-number" data-target="30">1</span>
+					<p class="stat-label">TEAM MEMBERS</p>
+				</div>
+
+				<div class="stat-item">
+					<span class="stat-number" data-target="20">1</span>
+					<p class="stat-label">ONGOING PROJECTS</p>
+				</div>
+			</section>
+			<div class="demo-strip">
+				<div class="demo-card reveal" style="transition-delay:.1s">
+					<img src="Rebar.png" alt="Rebar Detailing">
+					<span class="scene-label">Rebar Detailing</span>
+				</div>
+				<div class="demo-card reveal" style="transition-delay:.2s">
+					<img src="estimation.png" alt="Rebar Detailing">
+					<span class="scene-label">Rebar Estimation</span>
+				</div>
+				<div class="demo-card reveal" style="transition-delay:.3s">
+					<img src="detailing.png" alt="Rebar Detailing">
+					<span class="scene-label">Rebar Detailing </span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- ─── aboout detials ─── -->
+	<section class="preview-section" style="padding-top:2px;">
+		<div class="container">
+			<div class="preview-grid">
+				<div class="preview-card reveal">
+
+					<div class="preview-icon">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="12" r="7" />
+							<circle cx="12" cy="12" r="3" />
+							<circle cx="12" cy="12" r="0.75" fill="currentColor" />
+							<path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+						</svg>
+					</div>
+					<h3>Our Vision</h3>
+					<p>To be a globally recognized leader in rebar detailing services, sustainable practices that
+						contribute to the development of strong and long-lasting infrastructure.</p>
+				</div>
+				<div class="preview-card reveal" style="transition-delay:.15s">
+
+					<div class="preview-icon">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<path d="M3 18l5-6 3.5 3.5L16 9l5 9H3z" />
+							<path d="M16 9V4" />
+							<path d="M16 4h4.5l-1 1.5 1 1.5H16" />
+						</svg>
+					</div>
+					<h3>Our Mission</h3>
+					<p>To provide precise, innovative rebar detailing solutions that enhance structural safety while
+						fostering a culture of collaboration, accountability,improvement.</p>
+				</div>
+				<div class="preview-card reveal" style="transition-delay:.3s">
+
+					<div class="preview-icon">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<rect x="5" y="14" width="3" height="6" rx="0.5" />
+							<rect x="11" y="10" width="3" height="10" rx="0.5" />
+							<rect x="17" y="6" width="3" height="14" rx="0.5" />
+							<path d="M4 11c3-2 6-1 9-4l5-4" />
+							<path d="M14 3h4v4" />
+						</svg>
+					</div>
+					<h3>Vision for Sustainable Growth</h3>
+					<p>As we expand our technical capabilities, We remain focused on delivering error-free detailing
+						services on schedule while building lasting partnerships based on trust.</p>
+				</div>
+				<div class="preview-card reveal" style="transition-delay:.15s">
+
+					<div class="preview-icon">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="12" cy="8" r="3" />
+							<path d="M6 19c0-2.5 2.5-4.5 6-4.5s6 2.0 6 4.5" />
+
+							<path d="M5.5 6.5a2.5 2.5 0 0 1 2-2.5" stroke-dasharray="0" opacity="0.85" />
+							<path d="M4 15.5a4.5 4.5 0 0 1 2.5-3" opacity="0.85" />
+
+							<path d="M16.5 4a2.5 2.5 0 0 1 2 2.5" opacity="0.85" />
+							<path d="M17.5 12.5a4.5 4.5 0 0 1 2.5 3" opacity="0.85" />
+						</svg>
+					</div>
+					<h3>Experienced Technical Team</h3>
+					<p>Our team consists of 10+ experienced Rebar Detailing and Estimation specialists dedicated to
+						delivering accurate drawings, bar bending schedules and solutions.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── Services ─── -->
+	<section class="features-section" id="services">
+		<div class="container">
+			<!-- Dynamic Tabs Navigation -->
+			<div class="services-tabs-nav reveal">
+				<button class="services-tab-btn active" data-tab="detailing">
+					<span>Rebar Detailing</span>
+				</button>
+				<button class="services-tab-btn" data-tab="estimation">
+					<span>Rebar Estimation</span>
+				</button>
+				<div class="tab-indicator"></div>
+			</div>
+
+			<!-- Tab Content: Detailing -->
+			<div class="services-panel active" id="panel-detailing">
+				<div class="section-label reveal">Rebar Detailing</div>
+				<h2 class="section-title reveal">Precision-Driven <em>Detailing</em><br>for Flawless Construction</h2>
+				<p class="section-subtitle reveal">High-fidelity drawings and schedules tailored for seamless structural
+					coordination.</p>
+
+				<div class="features-list">
+					<div class="feat reveal">
+						<div class="feat-tag">BBS</div>
+						<div class="feat-icon">
+							<svg class="feat-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+  <rect x="3" y="3" width="18" height="18" rx="1.5" stroke="var(--amber)" stroke-width="1.5"/>
+  <path d="M9 3V21M15 3V21M3 9H21M3 15H21" stroke="var(--amber)" stroke-width="1" stroke-dasharray="2 2" opacity="0.4"/>
+  <rect x="5" y="5" width="4" height="4" fill="var(--amber)" opacity="0.7"/>
+</svg>
+						</div>
+						<h3>Accurate Bar Bending Schedules</h3>
+						<p>We prepare error-free <strong>Bar Bending Schedules</strong> for <strong>precise
+								reinforcement</strong> placement, optimizing material usage and streamlining on-site
+							execution.</p>
+					</div>
+					<div class="feat reveal" style="transition-delay:.08s">
+						<div class="feat-tag">Reinforcement</div>
+						<div class="feat-icon">
+						<svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="22" x2="22" y2="22"/><path d="M4 22V16H8V22"/><path d="M10 22V6L14 3V22"/><path d="M16 22V10L20 12V22"/><circle cx="6" cy="19" r="0.5" fill="currentColor"/><circle cx="12" cy="9" r="0.5" fill="currentColor"/><circle cx="12" cy="14" r="0.5" fill="currentColor"/><circle cx="18" cy="15" r="0.5" fill="currentColor"/></svg>
+						</div>
+						<h3>Structural Reinforcement Coordination</h3>
+						<p>Carefully coordinated detailing to identify <strong>structural clashes</strong> early,
+							preventing <strong>costly modifications</strong> and delays during construction.</p>
+					</div>
+					<div class="feat reveal" style="transition-delay:.16s">
+						<div class="feat-tag">Delivery</div>
+						<div class="feat-icon">
+					<svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+						</div>
+						<h3>Faster Project Delivery</h3>
+						<p>Fabrication-ready drawings to improve <strong>team productivity</strong>, minimize site
+							delays, and maintain tight <strong>construction schedules</strong>.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tab Content: Estimation -->
+			<div class="services-panel" id="panel-estimation">
+				<div class="section-label reveal">Rebar Estimation</div>
+				<h2 class="section-title reveal">Reliable Rebar Quantity for <em
+						class="highlight-cost-effective">Cost-Effective</em><br>Project Planning</h2>
+				<p class="section-subtitle reveal">Accurate rebar estimation for faster approvals and lower construction
+					costs.</p>
+
+				<div class="features-list">
+					<div class="feat reveal">
+						<div class="feat-tag">Quantification</div>
+						<div class="feat-icon">
+							<svg class="feat-icon-svg" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5">
+								<rect x="3" y="3" width="18" height="18" rx="1.5" stroke="var(--amber)"
+									stroke-width="1.5" />
+								<path d="M9 3V21M15 3V21M3 9H21M3 15H21" stroke="var(--amber)" stroke-width="1"
+									stroke-dasharray="2 2" opacity="0.4" />
+								<rect x="5" y="5" width="4" height="4" fill="var(--amber)" opacity="0.7" />
+							</svg>
+						</div>
+						<h3>Detailed Material Quantification</h3>
+						<p>Accurate takeoffs and <strong>material quantification</strong> enabling stakeholders to make
+							informed <strong>procurement and budgeting</strong> decisions.</p>
+					</div>
+					<div class="feat reveal" style="transition-delay:.08s">
+						<div class="feat-tag">Estimation</div>
+						<div class="feat-icon">
+							<svg class="feat-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+								<rect x="4" y="4" width="16" height="16" rx="1.5" stroke="var(--amber)"
+									stroke-width="1.5" />
+								<path d="M9 9H15M9 13H15M9 17H12" stroke="var(--amber)" stroke-width="1.5"
+									stroke-linecap="round" />
+								<path d="M9 22H15" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" />
+							</svg>
+						</div>
+						<h3>Global Code-Compliant Estimation</h3>
+						<p>Our estimation conforms to <strong>international standards</strong> like CRSI, EC2, and BS,
+							ensuring absolute compliance and <strong>engineering accuracy</strong>.</p>
+					</div>
+					<div class="feat reveal" style="transition-delay:.16s">
+						<div class="feat-tag">Optimization</div>
+						<div class="feat-icon">
+							<svg class="feat-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+								<path d="M3 3V21H21" stroke="var(--amber)" stroke-width="1.5" stroke-linecap="round" />
+								<path d="M7 14L11 9L15 12L20 6" stroke="var(--amber)" stroke-width="1.5"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<circle cx="20" cy="6" r="2.5" fill="var(--amber)" />
+							</svg>
+						</div>
+						<h3>Budget Optimization & Cost Control</h3>
+						<p>Precise rebar estimates to reduce material waste, enforce strict <strong>cost
+								control</strong>, and ensure total <strong>budget optimization</strong>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── LOGOS ─── -->
+	<div class="logos-section container" style="max-width:none; border-bottom:1px solid var(--border);">
+		<p class="logos-label">Industries We Serve</p>
+		<div class="logos-row">
+			<span class="logo-item">ACI |</span>
+			<span class="logo-item">BS |</span>
+			<span class="logo-item">IS |</span>
+			<span class="logo-item">Eurocode</span>
+
+		</div>
+	</div>
+
+	<!-- ─── why ─── -->
+	<section class="how-section" id="why">
+		<div class="container">
+			<div class="section-label reveal">Why Us</div>
+			<h2 class="section-title reveal">Professional <em> Engineering Solutions</em><br> for Reinforcing Steel.
+			</h2>
+
+			<div class="timeline">
+				<div class="timeline-step reveal" style="transition-delay:.0s">
+					<div class="step-line"></div>
+					<div class="step-num">Continuously Improving Through Technology</div>
+					<h3>Uncompromising Structural Accuracy</h3>
+					<p>Our meticulous approach to 2D/3D modeling ensures that every dimension is perfectly captured.</p>
+				</div>
+				<div class="timeline-step reveal" style="transition-delay:.1s">
+					<div class="step-line"></div>
+					<div class="step-num">Accountability at Every Stage</div>
+					<h3>Global Industry Compliance</h3>
+					<p>We deliver engineering estimates conforming strictly to EC2, BS, and CRSI Codes of Standard
+						Practice. </p>
+				</div>
+				<div class="timeline-step reveal" style="transition-delay:.2s">
+					<div class="step-line"></div>
+					<div class="step-num">Driven by Skilled Detailing Professionals</div>
+					<h3>Experienced Engineering Team</h3>
+					<p>Our dynamic crew of 10+ certified detailing specialists brings intensive field knowledge to your
+						project. </p>
+				</div>
+				<div class="timeline-step reveal" style="transition-delay:.3s">
+					<div class="step-line"></div>
+					<div class="step-num">Committed to Long-Term Client Success</div>
+					<h3>Flexible Digital Deliverables</h3>
+					<p>We provide hassle-free digital collaboration by submitting comprehensive drawings and BBS
+						directly via email or secure FTP.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── SPECS ─── -->
+	<section class="specs-section" id="specs">
+		<div class="container">
+			<div class="section-label reveal">Know More About Our Work </div>
+			<h2 class="section-title reveal">Built for<br><em>performance.</em></h2>
+
+			<div class="specs-layout">
+				<div class="specs-text reveal-left">
+					<p>Mavericks Rebar is structural detailing frim specializing in reinforced steel engineering
+						solutions.</p>
+					<p>Our team manages projects from start to finish, using advanced methods and a client-first
+						approach. We ensure every detail meets the highest standards, building functional spaces that
+						last and inspire lasting trust.</p>
+
+					<img src="rebar1.jpeg" alt="Rebar"
+						style="width:100%;height:220px;object-fit:cover;object-position:center;display:block;border-radius:4px;margin:32px 0;">
+					<a href="#contact" class="specs-cta">Contact Us</a>
+				</div>
+				<div class="specs-container">
+
+
+					<div class="spec-row section-divider">
+						<div class="spec-label">Company Name</div>
+						<div class="spec-value highlight-text">Mavericks Rebar</div>
+					</div>
+					<div class="spec-row">
+						<div class="spec-label">Core Services</div>
+						<div class="spec-value">• Rebar Detailing/Shop drawings • Rebar Estimation</div>
+					</div>
+					<div class="spec-row">
+						<div class="spec-label">Engineering Codes</div>
+						<div class="spec-value">ACI • BS • IS • CRSI</div>
+					</div>
+					<div class="spec-row">
+						<div class="spec-label">Deliverable Formats</div>
+						<div class="spec-value">DWG • DWF • PDF • XLS</div>
+					</div>
+					<div class="spec-row">
+						<div class="spec-label">Team Size</div>
+						<div class="spec-value">10+ Experienced Professionals</div>
+					</div>
+					<div class="spec-row">
+						<div class="spec-label">Location</div>
+						<div class="spec-value">Salem, Tamilnadu</div>
+					</div>
+					<div class="spec-row">
+						<div class="spec-label">Email Id</div>
+						<div class="spec-value">Info@mavericksrebar.com</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ─── WAITLIST CTA ─── -->
+	<section class="cta-section" id="contact">
+		<div class="cta-glow"></div>
+		<div class="container" style="position:relative;z-index:2;">
+
+			<div class="section-label" style="justify-content:center;" class="reveal">Contact Us</div>
+			<h2 class="section-title reveal" style="margin-bottom:16px;">Get in Touch<br>with <em>Mavericks Rebar</em>
+			</h2>
+			<p class="reveal" style="transition-delay:.1s">Ready to elevate the structural integrity of your next build?
+				Partner with Mavericks Rebar for unparalleled accuracy, competitive pricing, and timely project
+				handovers across the globe. Contact our Salem office today.</p>
+
+			<form class="cta-form reveal" style="transition-delay:.2s" onsubmit="handleSubmit(event, this)">
+				<div class="signup-row">
+					<input type="email" placeholder="Enter your email address" required>
+					<button type="submit">Get Quote</button>
+				</div>
+				<p class="cta-note"></p>
+				<p class="success-msg" id="cta-success">You're on the list — we'll be in touch.</p>
+			</form>
+		</div>
+	</section>
+
+	<!-- ─── FOOTER ─── -->
+	<footer>
+		<a href="#hero" class="nav-logo"><img src="logo (2).png" alt="Mavericks Rebar" class="nav-logo-img"><sup></sup></a>
+	
+			<p>Revolutionizing the Rebar Detailing Industry Since 2022.</p>
+		</div>
+		<p>© 2026 Mavericks Rebar . All rights reserved.</p>
+		<ul class="footer-links">
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Terms</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</ul>
+	</footer>
 </body>
+
 </html>
