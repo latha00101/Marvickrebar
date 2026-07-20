@@ -51,9 +51,10 @@
 
 		<p class="heropara">Delivering fabrication-ready rebar shop drawings, bar bending schedules, and quantity takeoffs for contractors and fabricators worldwide</p>
 
-		<form class="signup" onsubmit="handleSubmit(event, this)">
+		<form class="signup" onsubmit="handleSubmit(event, this)" action="https://api.web3forms.com/submit" method="POST">
 			<div class="signup-row">
-				
+				<input type="email"  required>
+				<input type="hidden" name="access_key" value="a31cab5a-38a2-4018-a478-92a51db11574" />
 				<button type="submit">Request a Quote</button>
 			</div>
 			<p class="email-note">Sign up to get notified </p>
@@ -443,7 +444,8 @@
 				
 
 				<div class="signup-row">
-					<input type="email" placeholder="Enter your email address"   name="access_key" value="a31cab5a-38a2-4018-a478-92a51db11574" required>
+					<input type="email"  required>
+					<input type="hidden" name="access_key" value="a31cab5a-38a2-4018-a478-92a51db11574" />
 					<button type="submit">Get Quote</button>
 				</div>
 				<p class="cta-note"></p>
